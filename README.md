@@ -1,11 +1,9 @@
 # InstaLele
-Instagram Massive Downloader
+Instagram Massive Downloader V2.1
 
-# Credit
-
-Ngupi - Hightech - Screetsec - Sikuder
-
-Backbox Linux Indonesia
+# What's New ?
+This tool can now check any requirements to run this tool
+With a new and fresher interface
 
 # Requirement
 
@@ -30,3 +28,11 @@ Git
 
 `./instalele`
 `
+# Credit
+
+Ngupi - Hightech - Screetsec - Sikuder
+
+Backbox Linux Indonesia
+
+# Disclaimer
+Note: modifications, changes, or alterations to this sourcecode is acceptable, however,any public releases utilizing this code must be approved by writen this tool (malesmandisec)
