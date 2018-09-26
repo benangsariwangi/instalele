@@ -1,30 +1,32 @@
 # InstaLele
-Instagram Mass Downloader
+Instagram Massive Downloader
 
 # Credit
 
-Ngupi - Hightech - Screetsec - Kod3n - Sikuder
+Ngupi - Hightech - Screetsec - Sikuder
 
-Wingkocoli - Janda Squad - Backbox Linux Indonesia
+Backbox Linux Indonesia
 
 # Requirement
 
 Curl
 
-`sudo apt install curl`
+`sudo apt-get install curl`
 
 Jq
 
-`sudo apt install jq`
+`sudo apt-get install jq`
+
+Git
+
+`sudo apt-get install git`
 
 # Usage
-`<git clone github.com/prabs401/instalele`
+`git clone github.com/prabs401/instalele`
 
 `cd instalele`
 
 `chmod +x instalele.sh`
 
 `./instalele`
-
-`<input your mass target>`
 `
