@@ -1,4 +1,4 @@
-#! bin/bash
+#!/bin/bash
 
 cyan='\e[0;36m'
 green='\e[1;32m'
@@ -8,31 +8,40 @@ white='\e[1;37m'
 red='\e[1;31m'
 yellow='\e[1;33m'
 BlueF='\e[1;34m'
-pink='\e[38;5;206m'
+pink='\e[38;5;20p'
 echo `clear`
-echo -e "$pink"
-echo '
-			__  .__   __.      _______.___________.    ___       __       _______  __       _______ 
-			|  | |  \ |  |     /       |           |   /   \     |  |     |   ____||  |     |   ____|
-			|  | |   \|  |    |   (----`---|  |----`  /  ^  \    |  |     |  |__   |  |     |  |__   
-			|  | |  . `  |     \   \       |  |      /  /_\  \   |  |     |   __|  |  |     |   __|  
-			|  | |  |\   | .----)   |      |  |     /  _____  \  |  `----.|  |____ |  `----.|  |____ 
-			|__| |__| \__| |_______/       |__|    /__/     \__\ |_______||_______||_______||_______'
-echo -e "$white"
-echo '
- 	                   			 --+[ Instagram Mass Downloader    ]+--   
-				          	 --+[ Github : github.com/prabs401 ]+--                                                  
 
-			   	       +----------------------| Credit |----------------------+
-				       |    Screetsec - Ngupi - Hightech - KOD3N - Sikuder    |
-				       |  Wingkocoli - Janda Squad - Backbox Linux Indonesisa |
-				       +------------------------------------------------------+
-'
+cekdepe(){
+	type curl >/dev/null 2>&1 || { echo -e >&2 "$yellow [!]::Curl Not Found | This tools needed curl, please install curl"; echo -e "$cyan [*]::Use : sudo apt-get install curl "; exit 1;}
+	type git >/dev/null 2>&1 || { echo -e >&2 "$yellow [!]::This tools needed git, please install git";   echo -e "$cyan [*]::Use : sudo apt-get install git "; exit 1;}
+	type jq >/dev/null 2>&1 || { echo -e >&2 "$yellow [!]::This tools needed jq, please install jq";   echo -e "$cyan [*]::Use : sudo apt-get install jq "; exit 1;}
+
+}
+run(){
+	cekdepe
+	echo -e "$yellow"
+echo '
+  __                 /\ \__         /\_ \         /\_ \            
+ /\_\    ___     ____\ \  _\    __  \//\ \      __\//\ \      __   
+ \/\ \ /  _  \  /  __\\ \ \/  / __ \  \ \ \   / __ \\ \ \   / __ \
+  \ \ \/\ \/\ \/\__, `\\ \ \_/\ \L\.\_ \_\ \_/\  __/ \_\ \_/\  __/ 
+   \ \_\ \_\ \_\/\____/ \ \__\ \__/.\_\/\____\ \____\/\____\ \____\
+    \/_/\/_/\/_/\/___/   \/__/\/__/\/_/\/____/\/____/\/____/\/____/';
+echo -e "$white"
+echo '    [*]::Instagram Mass Downloader V2.1'
+echo '    [*]::Coded by : malesmandisec'
+echo '    [*]::Github   : github.com/prabs401'
+echo '    [*]::Backbox Linux Indonesia'
+
+
+echo 
+mkdir output >/dev/null 2>&1 &
+printf "  Input mass link location : "
+tput sgr0
+echo -e -n $yellow
+read target
 tput sgr0
 
-mkdir output >/dev/null 2>&1 &
-printf "          Input mass target location : "
-read target
 echo ""
 	for line in `cat $target`
 	 do
@@ -54,8 +63,7 @@ echo ""
 
 	echo ""
 	echo -e "         $green [*] All Process Completed"
-	echo ""
 	tput sgr0
-
-
-
+	
+}
+run
